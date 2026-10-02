@@ -1,10 +1,10 @@
-# 🎯 Aimmy++ — Architecture Dual-PC & Injection Matérielle KMBox Net
+# Aimmy++ — Architecture Dual-PC & Injection Matérielle KMBox Net
 
 > **Aimmy++ est un système d'assistance de visée par vision IA 100% externe (Dual-PC), basé sur capture vidéo matérielle, inférence ONNX DirectML, simulation biomécanique humaine et injection HID indétectable via KMBox Net.**
 
 ---
 
-## 📑 Sommaire
+## Sommaire
 
 1. [Origine & Ce qui a été forké (Quoi et d'où)](#1-origine--ce-qui-a-été-forké-quoi-et-doù)
 2. [Historique des étapes & Liste des implémentations](#2-historique-des-étapes--liste-des-implémentations)
@@ -35,12 +35,12 @@
 * Les filtres de prédiction mathématique (Filtre de Kalman, algorithmes WiseTheFox et Shalloe).
 
 ### D. Ce qui a été éliminé ou remplacé
-* ❌ **Éliminé : Capture d'écran locale (DirectX ScreenGrab / Desktop Duplication)** : Cette méthode tournait sur le même PC que le jeu et laissait des traces mémoire / contextes DirectX repérables. Remplacée par une capture vidéo 100% externe via carte d'acquisition USB.
-* ❌ **Éliminé : Injection souris logicielle Windows (`mouse_event`)** : Les flags synthétiques `LLMHF_INJECTED` générés par Windows sont immédiatement détectés par les anti-cheats au niveau noyau (Ring 0).
-* ❌ **Éliminé (Legacy) : Arduino Leonardo USB Serial** : Utilisé dans les premières phases de développement, l'Arduino souffre de limitations critiques (descripteurs USB génériques identifiables par l'anti-cheat, latence et saturation du port série COM virtuel).
-* ✅ **Ajouté : Boîtier matériel dédié KMBox Net** piloté en réseau local TCP/IP avec clonage complet des descripteurs USB de la souris physique du joueur.
-* ✅ **Ajouté : Pipeline de calibration multi-résolution 4 étapes** (`ScalingCalculator.cs`).
-* ✅ **Ajouté : Suite complète de mitigations biomécaniques V2** (bruit physique Pixart 1/f, loi de Fitts, cycle overshoot/pause/correction, déformation log-normale des heatmaps).
+* **Éliminé : Capture d'écran locale (DirectX ScreenGrab / Desktop Duplication)** : Cette méthode tournait sur le même PC que le jeu et laissait des traces mémoire / contextes DirectX repérables. Remplacée par une capture vidéo 100% externe via carte d'acquisition USB.
+* **Éliminé : Injection souris logicielle Windows (`mouse_event`)** : Les flags synthétiques `LLMHF_INJECTED` générés par Windows sont immédiatement détectés par les anti-cheats au niveau noyau (Ring 0).
+* **Éliminé (Legacy) : Arduino Leonardo USB Serial** : Utilisé dans les premières phases de développement, l'Arduino souffre de limitations critiques (descripteurs USB génériques identifiables par l'anti-cheat, latence et saturation du port série COM virtuel).
+* **Ajouté : Boîtier matériel dédié KMBox Net** piloté en réseau local TCP/IP avec clonage complet des descripteurs USB de la souris physique du joueur.
+* **Ajouté : Pipeline de calibration multi-résolution 4 étapes** (`ScalingCalculator.cs`).
+* **Ajouté : Suite complète de mitigations biomécaniques V2** (bruit physique Pixart 1/f, loi de Fitts, cycle overshoot/pause/correction, déformation log-normale des heatmaps).
 
 ---
 
