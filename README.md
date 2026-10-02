@@ -288,23 +288,6 @@ The output executable is compiled into:
 - **Base Project**: [Babyhamsta/Aimmy](https://github.com/Babyhamsta/Aimmy) (V2 branch) — Initial DirectML ONNX inference architecture and UI foundations.
 - **Behavioral Kinematics Reference**: [sarperavci/human_mouse](https://github.com/sarperavci/human_mouse) — Trajectory interpolation research and spline analysis.
 - **Architectural Fork**: Aimmy++ replaces in-guest screen scraping and synthetic Win32 mouse injection with dual-system physical isolation, DirectShow hardware capture, 4-stage resolution calibration, and KMBox Net network injection.
-
----
-
-## Repository Operations
-
-To push local updates to your GitHub repository:
-
-```bash
-cd "C:\Users\sobyd\Documents\DEV\Aimmy++"
-
-# Verify remote configuration
-git remote -v
-
-# Push commits to main branch
-git push -u origin main
-```
-
 ---
 
 ## License
