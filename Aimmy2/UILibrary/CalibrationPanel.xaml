@@ -1,0 +1,173 @@
+<UserControl x:Class="Aimmy2.UILibrary.CalibrationPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent">
+     <Border Padding="15">
+         <StackPanel Orientation="Vertical">
+             
+             <!-- Title -->
+             <TextBlock Text="Dual-PC Calibration &amp; Resolution Settings" FontSize="16" FontWeight="Bold" Foreground="#E0E0E0" Margin="0,0,0,15"/>
+             
+             <!-- Info Section -->
+             <Border Background="#1A1A1A" Padding="10" CornerRadius="4" Margin="0,0,0,15" BorderBrush="#333333" BorderThickness="1">
+                 <StackPanel Orientation="Vertical">
+                     <TextBlock Text="⚙️ Resolution Explanation:" FontSize="12" Foreground="#FFD700" FontWeight="Bold" Margin="0,0,0,8"/>
+                     <TextBlock Text="1. Capture Card: Resolution from HDMI/USB capture device (video input)" FontSize="10" Foreground="#B0B0B0" Margin="0,0,0,4"/>
+                     <TextBlock Text="2. Game Resolution: What game renders at (before stretching to monitor)" FontSize="10" Foreground="#B0B0B0" Margin="0,0,0,4"/>
+                     <TextBlock Text="3. Native Screen: Your actual monitor resolution (game stretched to fit)" FontSize="10" Foreground="#B0B0B0" Margin="0,0,0,0"/>
+                 </StackPanel>
+             </Border>
+             
+             <!-- Resolution Settings Section -->
+             <Expander Header="🎯 Resolution Settings" Background="#1A1A1A" Foreground="#B0B0B0" Margin="0,0,0,15" IsExpanded="True" Padding="5">
+                 <StackPanel Orientation="Vertical" Margin="0,10,0,0">
+                     
+                     <!-- Capture Card Resolution -->
+                     <StackPanel Orientation="Vertical" Margin="0,0,0,15">
+                         <TextBlock Text="📹 Capture Card Resolution" FontSize="12" Foreground="#FF9800" FontWeight="Bold" Margin="0,0,0,5"/>
+                         <TextBlock Text="HDMI/USB input resolution from capture card" FontSize="9" Foreground="#808080" Margin="0,0,0,8"/>
+                         <Border Background="#0D0D0D" Padding="8,5" CornerRadius="3" BorderBrush="#333333" BorderThickness="1">
+                             <StackPanel Orientation="Horizontal">
+                                 <TextBlock Name="CaptureResolutionDisplay" Text="1280 x 720" FontSize="11" Foreground="#FFD700" FontWeight="Bold" Width="100"/>
+                                 <TextBlock Text="(Read from hardware - refresh after connecting capture card)" FontSize="9" Foreground="#808080" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                             </StackPanel>
+                         </Border>
+                     </StackPanel>
+                     
+                     <!-- Game Resolution Selection -->
+                     <StackPanel Orientation="Vertical" Margin="0,0,0,15">
+                         <TextBlock Text="🎮 Game Resolution (In-Game Setting)" FontSize="12" Foreground="#4CAF50" FontWeight="Bold" Margin="0,0,0,5"/>
+                         <TextBlock Text="What resolution does the game use? (Check game settings)" FontSize="9" Foreground="#808080" Margin="0,0,0,8"/>
+                         <ComboBox Name="GameResolutionCombo" 
+                                   Background="#2A2A2A" 
+                                   Foreground="#E0E0E0"
+                                   Height="28"
+                                   Padding="8,5"
+                                   BorderBrush="#333333">
+                             <ComboBoxItem>1920 x 1080 (FHD)</ComboBoxItem>
+                             <ComboBoxItem>1280 x 720 (HD)</ComboBoxItem>
+                             <ComboBoxItem>1024 x 768 (XGA)</ComboBoxItem>
+                             <ComboBoxItem>1440 x 1440 (Square)</ComboBoxItem>
+                             <ComboBoxItem>1600 x 900 (HD+)</ComboBoxItem>
+                             <ComboBoxItem>2560 x 1440 (QHD)</ComboBoxItem>
+                             <ComboBoxItem>3840 x 2160 (4K)</ComboBoxItem>
+                         </ComboBox>
+                     </StackPanel>
+                     
+                     <!-- Native Resolution Selection -->
+                     <StackPanel Orientation="Vertical" Margin="0,0,0,15">
+                         <TextBlock Text="🖥️ Native Screen Resolution (Monitor)" FontSize="12" Foreground="#2196F3" FontWeight="Bold" Margin="0,0,0,5"/>
+                         <TextBlock Text="Your physical monitor resolution (game will stretch to fit)" FontSize="9" Foreground="#808080" Margin="0,0,0,8"/>
+                         <ComboBox Name="NativeResolutionCombo" 
+                                   Background="#2A2A2A" 
+                                   Foreground="#E0E0E0"
+                                   Height="28"
+                                   Padding="8,5"
+                                   BorderBrush="#333333">
+                             <ComboBoxItem>1920 x 1080 (FHD)</ComboBoxItem>
+                             <ComboBoxItem>1280 x 720 (HD)</ComboBoxItem>
+                             <ComboBoxItem>1024 x 768 (XGA)</ComboBoxItem>
+                             <ComboBoxItem>1440 x 1440 (Square)</ComboBoxItem>
+                             <ComboBoxItem>1600 x 900 (HD+)</ComboBoxItem>
+                             <ComboBoxItem>2560 x 1440 (QHD)</ComboBoxItem>
+                             <ComboBoxItem>3840 x 2160 (4K)</ComboBoxItem>
+                         </ComboBox>
+                     </StackPanel>
+                     
+                     <!-- Buttons -->
+                     <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                         <Button Name="AutoDetectButton" 
+                                 Content="Auto-Detect" 
+                                 Background="#2196F3" 
+                                 Foreground="White"
+                                 Padding="10,8"
+                                 FontSize="10"
+                                 Cursor="Hand"
+                                 Margin="0,0,8,0"
+                                 Width="120"/>
+                         <Button Name="ApplyResolutionsButton" 
+                                 Content="Apply &amp; Save" 
+                                 Background="#4CAF50" 
+                                 Foreground="White"
+                                 Padding="10,8"
+                                 FontSize="10"
+                                 Cursor="Hand"
+                                 Width="120"/>
+                     </StackPanel>
+                     
+                 </StackPanel>
+             </Expander>
+            
+            <!-- Input Gain Section -->
+            <StackPanel Orientation="Vertical" Margin="0,0,0,15">
+                <TextBlock Text="Input Gain (Mouse Sensitivity)" FontSize="12" Foreground="#B0B0B0" Margin="0,0,0,8"/>
+                <TextBlock Name="InputGainValue" Text="1.0x" FontSize="11" Foreground="#FFD700" Margin="0,0,0,5"/>
+                <Slider Name="InputGainSlider" 
+                        Minimum="0.5" 
+                        Maximum="3.0" 
+                        Value="1.0"
+                        TickPlacement="BottomRight"
+                        TickFrequency="0.5"
+                        IsSnapToTickEnabled="True"
+                        Height="25"
+                        Margin="0,0,0,8"
+                        Foreground="#2196F3"
+                        Background="#1E1E1E"/>
+                <TextBlock Text="0.5x - 3.0x (Lower = less PC B mouse influence)" FontSize="10" Foreground="#808080" TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <!-- AI Sensitivity Section -->
+            <StackPanel Orientation="Vertical" Margin="0,0,0,15">
+                <TextBlock Text="AI Sensitivity Multiplier" FontSize="12" Foreground="#B0B0B0" Margin="0,0,0,8"/>
+                <TextBlock Name="AISensitivityValue" Text="1.0x" FontSize="11" Foreground="#FFD700" Margin="0,0,0,5"/>
+                <Slider Name="AISensitivitySlider" 
+                        Minimum="0.1" 
+                        Maximum="2.0" 
+                        Value="1.0"
+                        TickPlacement="BottomRight"
+                        TickFrequency="0.2"
+                        IsSnapToTickEnabled="True"
+                        Height="25"
+                        Margin="0,0,0,8"
+                        Foreground="#4CAF50"
+                        Background="#1E1E1E"/>
+                <TextBlock Text="0.1x - 2.0x (Higher = more AI targeting influence)" FontSize="10" Foreground="#808080" TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <!-- Smoothing Toggle -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                <CheckBox Name="SmoothingCheckBox" VerticalAlignment="Center" Foreground="#B0B0B0" Margin="0,0,10,0"/>
+                <TextBlock Text="Enable Movement Smoothing (EMA)" FontSize="11" VerticalAlignment="Center" Foreground="#B0B0B0"/>
+            </StackPanel>
+
+            <!-- Test Circle Button -->
+            <Button Name="TestCircleButton" 
+                    Content="Test Circle (Verify Calibration)" 
+                    Background="#FF9800" 
+                    Foreground="White"
+                    Padding="10,8"
+                    FontSize="11"
+                    Margin="0,0,0,10"
+                    Cursor="Hand"/>
+
+            <!-- Reset Button -->
+            <Button Name="ResetButton" 
+                    Content="Reset to Defaults" 
+                    Background="#9C27B0" 
+                    Foreground="White"
+                    Padding="10,8"
+                    FontSize="11"
+                    Margin="0,0,0,15"
+                    Cursor="Hand"/>
+
+            <!-- Status Display -->
+            <Border Background="#0D0D0D" BorderBrush="#333333" BorderThickness="1" Padding="10" CornerRadius="4">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Status:" FontSize="11" Foreground="#B0B0B0" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBlock Name="StatusText" Text="Ready" FontSize="10" Foreground="#4CAF50" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </Border>
+</UserControl>
