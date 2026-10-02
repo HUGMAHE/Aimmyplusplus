@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup Label="Globals" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Microsoft_AI_DirectML_SkipDebugLayerCopy>True</Microsoft_AI_DirectML_SkipDebugLayerCopy>
@@ -27,8 +27,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>false</UseWindowsForms>
-    <Platforms>AnyCPU;x64</Platforms>	  <Product></Product>
-    <Title></Title>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Product>Aimmy++</Product>
+    <Title>Aimmy++</Title>
     <AssemblyName>YmmiaV2</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <SignAssembly>False</SignAssembly>

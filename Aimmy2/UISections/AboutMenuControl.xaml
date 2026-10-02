@@ -52,7 +52,7 @@
                     </Path>
 
                     <!-- Title & Version -->
-                    <TextBlock Text="Aimmy"
+                    <TextBlock Text="Aimmy++"
                                FontFamily="{StaticResource Atkinson Hyperlegible}"
                                FontSize="24"
                                FontWeight="Bold"

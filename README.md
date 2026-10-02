@@ -1,6 +1,6 @@
-# 🎯 Aimmy V2 — Architecture Dual-PC & Injection Matérielle KMBox Net
+# 🎯 Aimmy++ — Architecture Dual-PC & Injection Matérielle KMBox Net
 
-> **Système d'assistance de visée par vision IA 100% externe (Dual-PC), basé sur capture vidéo matérielle, inférence ONNX DirectML, simulation biomécanique humaine et injection HID indétectable via KMBox Net.**
+> **Aimmy++ est un système d'assistance de visée par vision IA 100% externe (Dual-PC), basé sur capture vidéo matérielle, inférence ONNX DirectML, simulation biomécanique humaine et injection HID indétectable via KMBox Net.**
 
 ---
 
@@ -307,19 +307,19 @@ Le binaire exécutable sera généré dans `Aimmy2/bin/Release/net8.0-windows/Ai
 
 Ce répertoire a été initialisé proprement pour votre compte GitHub **HUGMAHE**.
 
+> [!NOTE]
+> GitHub n'autorisant pas les caractères spéciaux `+` dans les noms de dépôts (uniquement lettres, chiffres, tirets et points), le nom de dépôt recommandé sur GitHub est **`AimmyPlusPlus`** (ou `Aimmy-PlusPlus`). Le projet et le dossier local s'appellent quant à eux **`Aimmy++`**.
+
 Pour publier ce projet sur votre compte GitHub :
 
-1. Créez un nouveau dépôt vide sur votre compte GitHub nommé **`Aimmy-KMBox-DualPC`** (laissez les cases README, .gitignore et licence décochées).
-2. Dans le terminal, exécutez les commandes suivantes :
+1. Rendez-vous sur GitHub et créez un nouveau dépôt vide nommé **`AimmyPlusPlus`** (ou `Aimmy-PlusPlus`) sur votre compte **HUGMAHE** (laissez les cases README, .gitignore et licence décochées).
+2. Dans PowerShell ou un terminal Git, exécutez simplement :
 
 ```bash
-cd C:\Users\sobyd\Documents\DEV\Aimmy-KMBox-DualPC
+cd "C:\Users\sobyd\Documents\DEV\Aimmy++"
 
-# Ajout du remote vers votre compte GitHub
-git remote add origin https://github.com/HUGMAHE/Aimmy-KMBox-DualPC.git
-
-# Renommer la branche principale en main
-git branch -M main
+# Le remote est déjà configuré, sinon :
+# git remote add origin https://github.com/HUGMAHE/AimmyPlusPlus.git
 
 # Pousser le code vers GitHub
 git push -u origin main
