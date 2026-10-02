@@ -303,17 +303,6 @@ Le binaire exécutable sera généré dans `Aimmy2/bin/Release/net8.0-windows/Ai
 
 ---
 
-## 9. Instructions de déploiement GitHub
-
-Ce répertoire a été initialisé proprement pour votre compte GitHub **HUGMAHE**.
-
-> [!NOTE]
-> GitHub n'autorisant pas les caractères spéciaux `+` dans les noms de dépôts (uniquement lettres, chiffres, tirets et points), le nom de dépôt recommandé sur GitHub est **`AimmyPlusPlus`** (ou `Aimmy-PlusPlus`). Le projet et le dossier local s'appellent quant à eux **`Aimmy++`**.
-
-Pour publier ce projet sur votre compte GitHub :
-
-1. Rendez-vous sur GitHub et créez un nouveau dépôt vide nommé **`AimmyPlusPlus`** (ou `Aimmy-PlusPlus`) sur votre compte **HUGMAHE** (laissez les cases README, .gitignore et licence décochées).
-2. Dans PowerShell ou un terminal Git, exécutez simplement :
 
 ```bash
 cd "C:\Users\sobyd\Documents\DEV\Aimmy++"
